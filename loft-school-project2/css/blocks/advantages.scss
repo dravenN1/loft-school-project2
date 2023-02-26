@@ -1,0 +1,20 @@
+.advantage {
+    margin-bottom: 70px;
+}
+.advantage__list {
+    display: flex;
+    align-items: center;
+}
+
+.advantage__item {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 165px;
+    height: 56px;
+    font-family: 'Play';
+}
+.advantage__item-img {
+    width: 41px;
+    height: 41px;
+}

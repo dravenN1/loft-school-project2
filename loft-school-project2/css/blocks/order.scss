@@ -1,0 +1,144 @@
+.order {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.order__header-title {
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.controls {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.controls__leftside {
+    display: block;
+    align-items: center;
+    justify-content: flex-start;
+}
+.controls__leftside-topbutton {
+    width: 222px;
+    height: 58px;
+    border-radius: 5px;
+    border: transparent;
+}
+.controls__leftside-topbutton-left {
+    width: 222px;
+    height: 58px;
+    margin-right: 17px;
+    border-radius: 5px;
+    border: transparent;
+}
+.controls__leftside-topbutton {
+    width: 222px;
+    height: 58px;
+    border-radius: 5px;
+    border: transparent;
+} 
+.controls__leftside-topbuttons {
+    margin-bottom: 36px;
+}
+.controls__leftside-midbutton {
+    width: 467px;
+    height: 58px;
+    border-radius: 5px;
+    border: transparent;
+}
+.controls__leftside-bottombuttons {
+    margin-top: 36px;
+}
+
+.controls__leftside-bottombutton {
+    width: 105.5px;
+    height: 58px;
+    border-radius: 5px;
+    border: transparent;
+    margin-right: 9px;
+}
+.controls__leftside-bottombutton:last-child {
+    margin-right: 0px;
+}
+.controls__rightside-topbutton {
+    width: 450px;
+    height: 152px;
+    border-radius: 5px;
+}
+.controls__rightside-midbuttons {
+    display: flex;
+    justify-content: flex-start;
+}
+.controls__rightside-midbuttons-radio1 {
+    margin-right: 10px;
+}
+.controls__rightside-midbuttons-radio1-text {
+    margin-right: 22px;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+.controls__rightside-midbuttons-radio2 {
+    margin-right: 10px;
+}
+.controls__rightside-midbuttons-radio2-text {
+    margin-right: 22px;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px; 
+}
+
+.controls__rightside-bottombuttons {
+    display: flex;
+    justify-content: flex-start;
+}
+.controls__rightside-midbuttons-checkbox {
+    margin-right: 10px;
+}
+.controls__rightside-midbuttons-checkbox-text {  
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.controls__btns {
+    display: flex;
+    justify-content: flex-start;
+
+}
+.controls__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 41px;
+    background: #CA1B36;
+    border-radius: 100px;
+    width: 173px;
+    height: 68px;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;    
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .controls__btn:hover {
+    background: #9b1e1a;
+    transition:  .4s;
+  }
+
+  .controls__btn--clear {
+    background: transparent;
+  }
