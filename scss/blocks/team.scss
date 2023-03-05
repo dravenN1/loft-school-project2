@@ -38,18 +38,38 @@
         position: absolute;
     }
     &:hover ~ .team__dropdown {
-        display: block;
+        visibility: visible;
+        transition: visibility .6s;
+        opacity: 1;
+        animation: showup .5s linear forwards   
     }
+}
+@keyframes showup {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes showdown {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 .team__dropdown {
+    margin-top: 11px;
     text-align: center;
-    display: none;
+    visibility: hidden;  
     width: 200px;
+    transition: visibility .6s;
+    opacity: 0;
+    animation: showdown .5s linear forwards;
 }
 .team__workplace {
     color: $colorBlack;
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 19px;
 }
 .team__text {
     color: #666666;
+    font-size: 16px;
+    line-height: 19px;
 }
