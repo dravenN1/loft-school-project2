@@ -1,0 +1,55 @@
+.team__header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 53px;
+}
+
+.team__list {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.team__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team__img {
+    margin-bottom: 25px;
+}
+.team__name {
+    font-size: $baseFontsize;
+    line-height: 21px;
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 9px solid red;
+        top: 60%;
+        left: 110%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    &:hover ~ .team__dropdown {
+        display: block;
+    }
+}
+
+.team__dropdown {
+    text-align: center;
+    display: none;
+    width: 200px;
+}
+.team__workplace {
+    color: $colorBlack;
+}
+.team__text {
+    color: #666666;
+}
