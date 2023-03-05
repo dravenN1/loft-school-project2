@@ -1,0 +1,40 @@
+.preview {
+    background: $colorGrey;
+    align-items: stretch;
+    padding-top: 24px;
+    padding-bottom: 65px;
+}
+.preview__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 17px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 489px;
+        height: 489px;
+        background: url(../images/preview.png) center / contain no-repeat;
+    }
+}
+.preview__title {
+    font-family: 'Play';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    max-width: 400px;
+}
+.preview__description {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 36px;
+    font-family: $fontAlegreya;
+    max-width: 332px;
+}
