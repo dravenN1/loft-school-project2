@@ -1,0 +1,59 @@
+.footer {
+    height: rem(85px);
+}
+
+.container .footer {
+    flex-direction: column;
+}
+.info {
+    margin-top: 20px;
+}
+
+.info__address {
+    font-size: rem(18px);
+    line-height: rem(24px);
+    font-weight: 400;
+}
+.info__phone {
+    font-family: 'Play';
+    font-weight: 400;
+    font-size: rem(18px);
+    margin-left: rem(6px);
+    color: #292929;
+    white-space: nowrap;
+    &::before {
+        content: url ('../images/sprite.png') -40px -10px;
+        margin-right: rem(10px);
+        width: rem(14px); 
+        height: rem(15px);
+    }
+
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+}
+
+.socials__link {
+    &.socials__link-vk {
+        width: rem(30px);
+        height: rem(30px);
+        background: url('../images/sprite.png') -224px -10px;
+    }
+    &.socials__link-fb {
+        width: rem(30px);
+        height: rem(30px);
+        background: url('../images/sprite.png') -74px -10px;
+    }
+    &.socials__link-inst {
+        width: rem(30px);
+        height: rem(30px);
+        background: url('../images/sprite.png') -124px -10px;
+    }
+    &.socials__link-tg {
+        width: rem(30px);
+        height: rem(30px);
+        background: url('../images/sprite.png') -174px -10px;
+    }
+}

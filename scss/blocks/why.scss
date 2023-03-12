@@ -6,15 +6,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 62px;
+    margin-bottom: rem(62px);
+    text-align: center;
 }
 
 .why__header-title {
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
+    @include phones {
+        font-size: rem(32px);
+        line-height: rem(36px);
+    }
 }
 
 .why__header-text {
-    font-size: 16px;
+    font-size: rem(16px);
     color: #666;
     width: 56%;
     text-align: center;
@@ -23,6 +28,10 @@
 .why__list {
     display: flex;
     align-items: flex-start;
+
+    @include phones {
+        flex-direction: column;
+    }
 }
 
 
@@ -47,40 +56,86 @@
         }
     }
 
+    @include phones {
+        flex-direction: unset;
+        padding: 0;
+    }
     &::before {
         content: '';
-        width: 67px;
-        height: 21px;
+        width: rem(67px);
+        height: rem(21px);
         position: absolute;
-        right: -33px;
-        top: 60px;
+        right: rem(-33px);
+        top: rem(60px);
         background: url(../images/why-decor.png) center / contain no-repeat;
+
+        @include phones {
+            display: none;
+        }
     }
 }
 
 .why__item-circle {
     background: #F2F5F4;
-    width: 128px;
-    height: 128px;
+    width: rem(128px);
+    height: rem(128px);
     border-radius: 50%;
     display: block;
     position: relative;
-    padding: 34px;
-    margin-bottom: 24px;
+    padding: rem(34px);
+    margin-bottom: rem(24px);
+
+    @include phones {
+        margin-right: rem(12px);
+    }
 }
 .why__item-img {
     max-width: 100%;
-    height: auto;
+
+    &.why__item-battery {
+        width: rem(68px); 
+        height: rem(68px);
+        background: url('../images/sprite.png') -456px -12px;
+
+        @include phones {
+            background: url('../images/sprite.png') -460px -14px;
+        }
+    }
+    &.why__item-timer {
+        width: rem(68px); 
+        height: rem(68px);
+        background: url('../images/sprite.png') -546px -12px;
+
+        @include phones {
+            background: url('../images/sprite.png') -549px -14px;
+        }
+    }
+    &.why__item-volume {
+        width: rem(68px); 
+        height: rem(68px);
+        background: url('../images/sprite.png') -635px -12px;
+
+        @include phones {
+            background: url('../images/sprite.png') -636px -14px;
+        }
+    }
 }
+
+.why__item-content {
+    @include phones {
+        text-align: left;
+    }
+}
+
 .why__item-header {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    margin-bottom: 7px;
+    font-size: rem(24px);
+    line-height: rem(28px);
+    margin-bottom: rem(7px);
 }
 
 .why__item-text {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: rem(16px);
+    line-height: rem(19px);
     color: #666;
 }

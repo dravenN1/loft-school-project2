@@ -1,13 +1,19 @@
 .contacts {
     text-decoration: none;
     font-style: normal;
+    padding-top: 10px;
 }
 
 .contacts__phone {
     font-family: 'Play';
     font-weight: 400;
-    font-size: 18px;
-    margin-left: 6px;
+    font-size: rem(18px);
+    margin-left: rem(6px);
     color: #292929;
     white-space: nowrap;
+    &::before {
+        content:url('../images/phone.png') ;
+        margin-right: rem(10px);
+    }
+
 }

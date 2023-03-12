@@ -1,0 +1,4 @@
+.map {
+    background: url(../images/map.png) center / contain no-repeat;
+    @include tablets {max-width: $containerWidth};
+}

@@ -1,13 +1,16 @@
 .team__header{
     display: flex;
     justify-content: center;
-    margin-bottom: 53px;
+    margin-bottom: rem(53px);
 }
 
 .team__list {
     display: flex;
     justify-content: space-between;
-    
+
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .team__item-content {
@@ -17,11 +20,15 @@
 }
 
 .team__img {
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
+
+    @include tablets {
+        display: none;
+    }
 }
 .team__name {
     font-size: $baseFontsize;
-    line-height: 21px;
+    line-height: rem(21px);
     font-weight: 700;
     position: relative;
 
@@ -29,13 +36,18 @@
         content: '';
         width: 0;
         height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 9px solid red;
+        border-left: rem(5px) solid transparent;
+        border-right: rem(5px) solid transparent;
+        border-top: rem(10px) solid red;
         top: 60%;
         left: 110%;
         transform: translate(-50%, -50%);
         position: absolute;
+        border-radius: 0;
+
+        @include tablets {
+            border-top: rem(10px) solid #365A49;;
+        }
     }
     &:hover ~ .team__dropdown {
         visibility: visible;
@@ -54,22 +66,22 @@
 }
 
 .team__dropdown {
-    margin-top: 11px;
+    margin-top: rem(11px);
     text-align: center;
     visibility: hidden;  
-    width: 200px;
+    width: rem(200px);
     transition: visibility .6s;
     opacity: 0;
     animation: showdown .5s linear forwards;
 }
 .team__workplace {
     color: $colorBlack;
-    margin-bottom: 6px;
-    font-size: 16px;
-    line-height: 19px;
+    margin-bottom: rem(6px);
+    font-size: rem(16px);
+    line-height: rem(19px);
 }
 .team__text {
     color: #666666;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: rem(16px);
+    line-height: rem(19px);
 }

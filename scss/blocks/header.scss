@@ -1,7 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-right: 24px;
+    align-items: flex-start;
+    padding-right: rem(24px);
 }
 
+.header__contacts__phone {
+    @include tablets {
+        display: none;
+    }
+}

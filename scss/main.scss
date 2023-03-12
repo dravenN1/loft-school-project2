@@ -3,19 +3,23 @@ $fontAlegreya: 'Alegreya Sans', sans-serif;
 $containerWidth: 940px;
 $baseFontsize: 18px;
 
+$tablets: 768px;
+$phones: 480px;
+
 $colorBlack: #292929;
 $colorGrey: #f5f5f5;
 $colorRed: #E01F3D;
 
+@import 'layout/media';
 @import 'layout/fonts';
 @import 'layout/normalize';
 @import 'layout/base';
 @import 'layout/btn';
-@import 'layout/media';
 
 @import 'blocks/header';
 @import 'blocks/menu';
 @import 'blocks/contacts';
+@import 'blocks/hamburder';
 @import 'blocks/logo';
 @import 'blocks/features';
 @import 'blocks/why';
@@ -24,3 +28,5 @@ $colorRed: #E01F3D;
 @import 'blocks/preview';
 @import 'blocks/radio';
 @import 'blocks/team';
+@import 'blocks/map';
+@import 'blocks/footer';
