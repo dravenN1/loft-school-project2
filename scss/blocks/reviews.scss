@@ -20,6 +20,8 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
+        padding: rem(56px) rem(24px) rem(40px);
+        margin-bottom: rem(30px);
     }
 }
 
@@ -31,6 +33,7 @@
     height: rem(264px);
     flex-shrink: 0;
     margin-right: rem(39px);
+    overflow: hidden;
 
     @include tablets {
         width: rem(130px);
@@ -47,7 +50,12 @@
 .review__header {
     font-weight: 700;
     font-size: rem(24px);
+    line-height: rem(28px);
     margin-bottom: rem(27px);
+
+    @include tablets {
+        margin-bottom: rem(16px);
+    }
 
 }
 .review__text {
@@ -59,6 +67,7 @@
 
     @include tablets {
         max-width: rem(687px);
+        margin-bottom: rem(16px);
     }
 }
 .review__name {
@@ -67,6 +76,7 @@
     line-height: rem(21px);
 
     @include tablets {
+        line-height: rem(24px);
         font-weight: 400;
     }
 }

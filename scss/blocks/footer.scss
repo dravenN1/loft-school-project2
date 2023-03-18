@@ -1,59 +1,46 @@
 .footer {
-    height: rem(85px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px 0;
+}
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.container .footer {
-    flex-direction: column;
-}
-.info {
-    margin-top: 20px;
-}
 
 .info__address {
     font-size: rem(18px);
     line-height: rem(24px);
     font-weight: 400;
+    margin-bottom: rem(3px);
 }
-.info__phone {
-    font-family: 'Play';
-    font-weight: 400;
-    font-size: rem(18px);
-    margin-left: rem(6px);
-    color: #292929;
-    white-space: nowrap;
-    &::before {
-        content: url ('../images/sprite.png') -40px -10px;
-        margin-right: rem(10px);
-        width: rem(14px); 
-        height: rem(15px);
-    }
 
-}
 
 .socials {
     display: flex;
     flex-direction: row;
+    transform: translateX(20px);
 }
 
-.socials__link {
-    &.socials__link-vk {
-        width: rem(30px);
-        height: rem(30px);
-        background: url('../images/sprite.png') -224px -10px;
+.socials__item {
+    margin-right: rem(10px);
+
+    &:last-child {
+        margin-right: 0;
     }
-    &.socials__link-fb {
-        width: rem(30px);
-        height: rem(30px);
-        background: url('../images/sprite.png') -74px -10px;
-    }
-    &.socials__link-inst {
-        width: rem(30px);
-        height: rem(30px);
-        background: url('../images/sprite.png') -124px -10px;
-    }
-    &.socials__link-tg {
-        width: rem(30px);
-        height: rem(30px);
-        background: url('../images/sprite.png') -174px -10px;
+}
+
+.socials__icon {
+    width: rem(30px);
+    height: rem(30px);
+    color: #b3b3b3;
+
+    &:hover {
+        color: #292929;
     }
 }

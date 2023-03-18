@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap';
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -428,9 +429,17 @@ a:visited {
           align-items: flex-start;
   padding-right: 1.3333333333rem;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 1.0555555556rem;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  .header__contacts__phone {
+  .header__contacts-phone {
     display: none;
   }
 }
@@ -476,19 +485,6 @@ a:visited {
   text-decoration: none;
   font-style: normal;
   padding-top: 10px;
-}
-
-.contacts__phone {
-  font-family: "Play";
-  font-weight: 400;
-  font-size: 1rem;
-  margin-left: 0.3333333333rem;
-  color: #292929;
-  white-space: nowrap;
-}
-.contacts__phone::before {
-  content: url("../images/phone.png");
-  margin-right: 0.5555555556rem;
 }
 
 .hamburger {
@@ -1036,6 +1032,11 @@ a:visited {
   padding-top: 1.3333333333rem;
   padding-bottom: 3.6111111111rem;
 }
+@media screen and (max-width: 768px) {
+  .preview {
+    padding-top: 2.2222222222rem;
+  }
+}
 
 .preview__container {
   display: -webkit-box;
@@ -1343,48 +1344,36 @@ a:visited {
 }
 
 .map {
-  background: url(../images/map.png) center/contain no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .map {
-    max-width: 940px;
-  }
+  background: url(../images/map.png) center/сover no-repeat;
+  position: relative;
 }
 
 .footer {
-  height: 4.7222222222rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px 0;
 }
 
-.container .footer {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.info {
-  margin-top: 20px;
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .info__address {
   font-size: 1rem;
   line-height: 1.3333333333rem;
   font-weight: 400;
-}
-
-.info__phone {
-  font-family: "Play";
-  font-weight: 400;
-  font-size: 1rem;
-  margin-left: 0.3333333333rem;
-  color: #292929;
-  white-space: nowrap;
-}
-.info__phone::before {
-  content: url "../images/sprite.png" -40px -10px;
-  margin-right: 0.5555555556rem;
-  width: 0.7777777778rem;
-  height: 0.8333333333rem;
+  margin-bottom: 0.1666666667rem;
 }
 
 .socials {
@@ -1395,26 +1384,35 @@ a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
-.socials__link.socials__link-vk {
-  width: 1.6666666667rem;
-  height: 1.6666666667rem;
-  background: url("../images/sprite.png") -224px -10px;
+.socials__item {
+  margin-right: 0.5555555556rem;
 }
-.socials__link.socials__link-fb {
-  width: 1.6666666667rem;
-  height: 1.6666666667rem;
-  background: url("../images/sprite.png") -74px -10px;
+.socials__item:last-child {
+  margin-right: 0;
 }
-.socials__link.socials__link-inst {
+
+.socials__icon {
   width: 1.6666666667rem;
   height: 1.6666666667rem;
-  background: url("../images/sprite.png") -124px -10px;
+  color: #b3b3b3;
 }
-.socials__link.socials__link-tg {
-  width: 1.6666666667rem;
-  height: 1.6666666667rem;
-  background: url("../images/sprite.png") -174px -10px;
+.socials__icon:hover {
+  color: #292929;
+}
+
+.phone-number {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #292929;
+  white-space: nowrap;
+}
+
+.phone-number__icon {
+  width: 0.6666666667rem;
+  height: 0.6666666667rem;
 }
 /*# sourceMappingURL=main.css.map */

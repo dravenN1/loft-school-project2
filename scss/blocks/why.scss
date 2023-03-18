@@ -2,16 +2,34 @@
     background: white;
 }
 
+.why__container {
+    @include tablets {
+        width: 99%;
+    }
+
+    @include phones {
+        width: 95%;
+    }
+}
+
 .why__header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: rem(62px);
     text-align: center;
+
+    @include tablets {
+        margin-bottom: rem(55px);
+    }
 }
 
 .why__header-title {
     margin-bottom: rem(18px);
+    
+    @include tablets {
+        margin-bottom: rem(11px);
+    }
     @include phones {
         font-size: rem(32px);
         line-height: rem(36px);
@@ -23,6 +41,10 @@
     color: #666;
     width: 56%;
     text-align: center;
+
+    @include tablets {
+        width: 71%;
+    }
 }
 
 .why__list {
@@ -44,6 +66,14 @@
     text-align: center;
     position: relative;
 
+    @include tablets {
+        padding: 0 0.4%;
+    }
+    
+    @include phones {
+        flex-direction: unset;
+        padding: 0;
+    }
 
     &:first-child {
         padding-left: 0;
@@ -55,11 +85,6 @@
             display: none;
         }
     }
-
-    @include phones {
-        flex-direction: unset;
-        padding: 0;
-    }
     &::before {
         content: '';
         width: rem(67px);
@@ -69,7 +94,7 @@
         top: rem(60px);
         background: url(../images/why-decor.png) center / contain no-repeat;
 
-        @include phones {
+        @include tablets {
             display: none;
         }
     }
@@ -89,36 +114,9 @@
         margin-right: rem(12px);
     }
 }
-.why__item-img {
-    max-width: 100%;
-
-    &.why__item-battery {
-        width: rem(68px); 
-        height: rem(68px);
-        background: url('../images/sprite.png') -456px -12px;
-
-        @include phones {
-            background: url('../images/sprite.png') -460px -14px;
-        }
-    }
-    &.why__item-timer {
-        width: rem(68px); 
-        height: rem(68px);
-        background: url('../images/sprite.png') -546px -12px;
-
-        @include phones {
-            background: url('../images/sprite.png') -549px -14px;
-        }
-    }
-    &.why__item-volume {
-        width: rem(68px); 
-        height: rem(68px);
-        background: url('../images/sprite.png') -635px -12px;
-
-        @include phones {
-            background: url('../images/sprite.png') -636px -14px;
-        }
-    }
+.why__item-icon {
+    width: rem(68px);   
+    height: rem(68px);
 }
 
 .why__item-content {
@@ -132,6 +130,10 @@
     font-size: rem(24px);
     line-height: rem(28px);
     margin-bottom: rem(7px);
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
 }
 
 .why__item-text {

@@ -7,6 +7,10 @@
     flex-direction: column;
     margin-bottom: rem(58px);
     color: white;
+
+    @include tablets {
+        margin-bottom: rem(28px);
+    }
 }
 
 .order__title {
@@ -20,7 +24,7 @@
     display: flex;
     
     @include tablets {
-        padding: 0px 19%;
+        padding: 0px 18%;
         flex-direction: column;
     }
 
@@ -46,8 +50,16 @@
     display: flex;
     margin-bottom: rem(10px);
 
+
+    @include tablets {
+        margin-bottom: rem(16px);
+    }
     &--textarea {
         margin-bottom: rem(34px);
+
+        @include tablets {
+            margin-bottom: rem(17px);
+        }
     }
 }
 
@@ -68,11 +80,17 @@
     border-radius: rem(4px);
     align-items: center;
     
-
+    @include tablets {
+        padding: rem(4px) rem(16px);
+    }
 
     &--textarea {
         height: rem(152px);
         resize: none;
+
+        @include tablets {
+            height: rem(80px);
+        }
     }
 
     &:focus {
@@ -104,5 +122,6 @@
     @include tablets {
         display: flex;
         justify-content: center;
+        margin-top: rem(39px);
     }
 }
