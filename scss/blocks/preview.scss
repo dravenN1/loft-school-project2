@@ -41,15 +41,15 @@
         align-items: center;
         text-align: center;
     }
-        &::before 
-
+        &::before {
             @include tablets {
-                {content: "";
+                content: "";
                 width: rem(323px);
                 height: rem(323px);
                 background: url(../images/preview768.png) center / contain no-repeat;
-                margin-bottom: rem(64px);}
+                margin-bottom: rem(64px);
             }
+        }
 }
 .preview__title {
     font-family: $fontPlay;
