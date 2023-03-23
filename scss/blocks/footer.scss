@@ -20,7 +20,6 @@
 
 .info {
     @include phones {
-        margin-left: rem(38px);
         margin-bottom: rem(19px);
     }
 }
@@ -31,7 +30,14 @@
     font-weight: 400;
     margin-bottom: rem(3px);
 
+
+    @include tablets {
+        font-size: rem(21px);
+        line-height: rem(24px);
+    }
     @include phones {
+        font-size: rem(18px);
+        line-height: rem(24px);
         margin-bottom: rem(12px);
     }
 }
@@ -41,10 +47,21 @@
     display: flex;
     flex-direction: row;
     transform: translateX(20px);
+
+    @include tablets {
+        transform: translateX(-33px);
+    }
+    @include phones {
+        transform: translateX(0);
+    }
 }
 
 .socials__item {
     margin-right: rem(10px);
+
+    @include phones {
+        margin-right: rem(14px);
+    }
 
     &:last-child {
         margin-right: 0;
@@ -58,5 +75,10 @@
 
     &:hover {
         color: #292929;
+    }
+
+    @include phones {
+        width: rem(24px);
+        height: rem(24px);
     }
 }

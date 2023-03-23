@@ -7,6 +7,10 @@
     @include tablets {
         padding-top: rem(40px);
     }
+
+    @include phones {
+        padding-top: rem(24px);
+    }
 }
 .preview__container {
     display: flex;
@@ -70,7 +74,8 @@
         font-size: rem(32px);
         line-height: rem(36px);
         padding: 0 13%;
-        max-width: 100%
+        max-width: 100%;
+        margin-bottom: rem(14px);
     }
 }
 .preview__description {
@@ -88,7 +93,10 @@
     }
 
     @include phones {
-        padding: 0 17%;
+        padding: 0 14%;
         max-width: 100%;
+        font-size: rem(18px);
+        line-height: rem(20px);
+        margin-bottom: rem(26px);
     }
 }

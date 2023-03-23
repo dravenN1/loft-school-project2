@@ -30,10 +30,6 @@
     @include tablets {
         margin-bottom: rem(11px);
     }
-    @include phones {
-        font-size: rem(32px);
-        line-height: rem(36px);
-    }
 }
 
 .why__header-text {
@@ -44,6 +40,10 @@
 
     @include tablets {
         width: 71%;
+    }
+
+    @include phones {
+        width: 88%;
     }
 }
 
@@ -73,6 +73,7 @@
     @include phones {
         flex-direction: unset;
         padding: 0;
+        margin-bottom: rem(35px);
     }
 
     &:first-child {
@@ -112,6 +113,7 @@
 
     @include phones {
         margin-right: rem(12px);
+        margin-bottom: 0;
     }
 }
 .why__item-icon {
@@ -134,7 +136,12 @@
     @include tablets {
         margin-bottom: rem(20px);
     }
+    @include phones {
+        margin-bottom: rem(6px);
+    }
+
 }
+
 
 .why__item-text {
     font-size: rem(16px);
