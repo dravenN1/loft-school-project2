@@ -1,0 +1,121 @@
+.slider {
+    background: #F8FAF9;
+}
+
+.slider__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-left  {
+    width: rem(13.5px);
+    height: rem(27px);
+}
+
+.arrow-right  {
+    width: rem(13.5px);
+    height: rem(27px);
+    margin-left: 200px;
+}
+
+.slider__page {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.slider__img {
+    width: rem(452px);
+    height: rem(452px);
+    margin-right: rem(60px);
+    margin-left: rem(33px);
+}
+
+.clock {
+    width: rem(42px);
+    height: rem(42px);
+    position: absolute;
+    top: 29%;
+    left: 51%;
+    transform: translateX(-50%);
+}
+.slider__content--structure {
+    width: rem(91px);
+    height: rem(91px);
+    position: relative;
+    background: #9A9A9A;
+    border-radius: rem(4px);
+    margin-bottom: rem(25px);
+}
+
+.slider__header {
+    font-size: rem(36px);
+    line-height: rem(42px);
+    text-transform: uppercase;
+    margin-bottom: rem(25px);
+    width: rem(419px);  
+}
+
+.slider__text {
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: #666666;
+    margin-bottom: rem(27px);
+    padding: 0 10% 0 0;
+}
+
+.slider__data {
+    display: flex;
+    flex-direction: row;
+    gap: rem(86px);
+    margin-bottom: rem(25px);
+}
+
+.slider__charge {
+    display: flex;
+    flex-direction: column;
+
+    &--header {
+        font-size: rem(16px);
+        line-height: rem(19px);
+        color: #666666;
+    }
+
+    &--text {
+        font-size: rem(18px);
+        line-height: rem(21px);
+        font-weight: bold;
+    }
+}
+
+.slider__weight {
+    display: flex;
+    flex-direction: column;
+    
+    &--header {
+        font-size: rem(16px);
+        line-height: rem(19px);
+        color: #666666;
+    }
+
+    &--text {
+        font-size: rem(18px);
+        line-height: rem(21px);
+        font-weight: bold;
+    }
+}
+
+.slider__order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(13px);
+}
+
+.slider__price {
+    font-size: rem(36px);
+    line-height: rem(60px);
+    color: #151515;
+}
