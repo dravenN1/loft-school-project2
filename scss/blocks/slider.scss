@@ -67,6 +67,7 @@
         margin-bottom: rem(49px);
         margin-left: 0px;
         margin-right: 0px;
+        position: relative;
     }
 }
 
@@ -87,13 +88,6 @@
 }
 
 .slider__content {
-    
-    @include tablets {    
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-}
     &--structure {
         width: rem(91px);
         height: rem(91px);
@@ -101,11 +95,60 @@
         background: #9A9A9A;
         border-radius: rem(4px);
         margin-bottom: rem(25px);
-    
+        
+        
+        &:hover .slider__content--dropdown{
+            opacity: 1;
+            transition: .5s;
+        }
         @include tablets {
             display: none;
         }
     }
+    &--dropdown {
+        width: rem(273px);
+        height: rem(294px);
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+        margin-left: rem(91px);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        transition: .5s;
+    }
+    &--list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: rem(28px);
+    }
+    &--item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &--img {
+        width: rem(24px);
+        height: rem(24px);
+        margin-right: rem(16px);
+    }
+    &--text {
+        width: rem(127px);
+    }
+
+    &--numbers {
+        width: rem(55px);
+        display: flex;
+        justify-content: flex-end;
+    }
+    @include tablets {    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+}
 }
 
 
