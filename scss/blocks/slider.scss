@@ -4,41 +4,8 @@
 
 .slider__container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
-    @include phones {   
-        width: 480px;
-    }
-}
-
-.arrow-left  {
-    width: rem(13.5px);
-    height: rem(27px);
-
-    @include tablets {
-        margin-left: 0px;
-        transform: translateY(-150px);
-    }
-    @include phones {
-        margin-left: rem(14px);
-        transform: translateY(-165px);
-    }
-}
-
-.arrow-right  {
-    width: rem(13.5px);
-    height: rem(27px);
-    margin-left: rem(200px);
-    @include tablets {
-        margin-left: 0px;
-        transform: translateY(-150px);
-    }
-    @include phones {
-        margin-right: rem(14px);
-        transform: translateY(-165px);
-    }
 }
 
 .slider__page {
@@ -55,6 +22,49 @@
     }
 }
 
+
+.slider__button {
+    position: absolute;
+    top: 57%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    z-index: 1;
+
+    &--prev{
+        left: -20px;
+
+        @include tablets {
+            left: 18%;
+        }
+
+        @include phones {
+            left: 0;
+        }
+    }
+
+    &--next {
+        right: -30px;
+        
+        @include tablets {
+            right: 18%;
+        }
+
+        @include phones {
+            right: 0;
+        }
+    }
+
+    @include tablets {
+        transform: initial;
+        top: rem(150px);
+    }
+}
+
+.slider__button-icon {
+    width: 14px;
+    height: 27px;
+}
 .slider__img {
     width: rem(452px);
     height: rem(452px);
@@ -68,6 +78,10 @@
         margin-left: 0px;
         margin-right: 0px;
         position: relative;
+    }
+
+    @include phones {
+        margin-bottom: rem(26px);
     }
 }
 
@@ -88,7 +102,7 @@
 }
 
 .slider__content {
-    &--structure {
+    &-structure {
         width: rem(91px);
         height: rem(91px);
         position: relative;
@@ -97,48 +111,50 @@
         margin-bottom: rem(25px);
         
         
-        &:hover .slider__content--dropdown{
+        &:hover .slider__content-dropdown{
             opacity: 1;
             transition: .5s;
+            left: 100%;
         }
         @include tablets {
             display: none;
         }
     }
-    &--dropdown {
+    &-dropdown {
+        position: absolute;
+        padding: 18px 14px;
         width: rem(273px);
-        height: rem(294px);
-        background: rgba(255, 255, 255, 0.8);
+        background: #d5d5d5;
         box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
-        margin-left: rem(91px);
         border-radius: 4px;
         display: flex;
         justify-content: center;
         opacity: 0;
-        transition: .5s;
+        left: -9999px;
+        transition: opacity .5s;
     }
-    &--list {
+    &-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: rem(28px);
     }
-    &--item {
+    &-item {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
     }
-    &--img {
+    &-img {
         width: rem(24px);
         height: rem(24px);
         margin-right: rem(16px);
     }
-    &--text {
+    &-text {
         width: rem(127px);
     }
 
-    &--numbers {
+    &-numbers {
         width: rem(55px);
         display: flex;
         justify-content: flex-end;
@@ -148,7 +164,7 @@
         align-items: center;
         flex-direction: column;
         text-align: center;
-}
+    }
 }
 
 
@@ -204,13 +220,17 @@
     display: flex;
     flex-direction: column;
 
-    &--header {
+    @include phones {
+        text-align: left;
+    }
+
+    &-header {
         font-size: rem(16px);
         line-height: rem(19px);
         color: #666666;
     }
 
-    &--text {
+    &-text {
         font-size: rem(18px);
         line-height: rem(21px);
         font-weight: bold;
@@ -221,26 +241,6 @@
     }
 }
 
-.slider__weight {
-    display: flex;
-    flex-direction: column;
-    
-    &--header {
-        font-size: rem(16px);
-        line-height: rem(19px);
-        color: #666666;
-    }
-
-    &--text {
-        font-size: rem(18px);
-        line-height: rem(21px);
-        font-weight: bold;
-    }
-
-    @include tablets {
-        display: flex;
-    }
-}
 
 .slider__order {
     display: flex;
@@ -257,4 +257,13 @@
     font-size: rem(36px);
     line-height: rem(60px);
     color: #151515;
+
+    @include tablets {
+        font-size: rem(40px);
+        margin-right: rem(27px);
+    }
+
+    @include phones {
+        font-size: ren(32px);
+    }
 }

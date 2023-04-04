@@ -15,20 +15,26 @@
 //     background: black;
 //     height: 4px;
 //     border-radius: 10px;
-.burger{
-    display: none;
+.burger {
+  display: none;
 
     @include tablets {
         position: fixed; 
-        top: 40px;
+        top: 48px;
         right: 35px;
         height: 24px;
         width: 26px;
-        cursor:pointer;
+        cursor: pointer;
         z-index: 15;
         transition:all .4s;
         display: flex;
         justify-content: space-between;
+    }
+
+    @include phones {
+        right: 20px;
+        top: 30px;
+        display: flex;
     }
     
     &__plank{
@@ -36,14 +42,12 @@
       height: 4px;
       position: absolute;
       background-color: black;
-      top:0;
+      top: 0;
       left: 0;
       transition: all .4s;
       border-radius: 10px;
-  
-      
       &:nth-child(2){
-        top:50%;
+        top: 50%;
         transform:translateY(-50%);
       }
       
@@ -52,7 +56,7 @@
         top:initial;
       }
     }
-  }
+}
 .overlay{
     height: 100%;
     width: 100%;
